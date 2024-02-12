@@ -1,0 +1,91 @@
+
+         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity"
+            android:orientation="vertical"
+             android:background="#000000">
+
+
+
+
+
+             <Button
+                 android:layout_width="200dp"
+                 android:id="@+id/print"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 android:text="Print List"
+                 android:layout_marginTop="100dp"
+                 android:background="@drawable/button_shape" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Center point:"
+                android:layout_marginLeft="59dp"
+
+                android:textAlignment="textStart"
+                android:textSize="30dp"
+                android:layout_marginTop="50dp"/>
+
+            <EditText
+                android:id="@+id/y"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:hint="Enter Y"
+                android:textSize="30dp"
+                android:textAlignment="center"
+                android:background="@drawable/shape"/>
+
+            <EditText
+                android:id="@+id/x"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:hint="Enter x"
+                android:textSize="30dp"
+                android:textAlignment="center"
+                android:background="@drawable/shape"/>
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="Radius:"
+                 android:layout_marginLeft="59dp"
+
+                 android:textAlignment="textStart"
+                 android:textSize="30dp"
+                 android:layout_marginTop="20dp"/>
+             <EditText
+                 android:id="@+id/radius"
+                 android:layout_width="300dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="20dp"
+                 android:hint="Enter Radius"
+                 android:layout_gravity="center"
+                 android:textSize="30dp"
+                 android:textAlignment="center"
+                 android:background="@drawable/shape" />
+            <Button
+                android:layout_width="200dp"
+                android:id="@+id/add"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Add"
+
+                android:layout_marginTop="100dp"
+                android:background="@drawable/button_shape"/>
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="90dp"
+                 android:layout_marginTop="100dp"
+                 android:background="#1F5AF1" />
+
+
+         </LinearLayout>

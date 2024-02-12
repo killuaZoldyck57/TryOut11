@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#2C2C2C">
+
+    <TextView
+      android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="2"
+        android:text="0"
+        android:id="@+id/display"
+        android:layout_margin="10dp"
+        android:textColor="#ffffff"
+        android:gravity="bottom"
+        android:textSize="40dp"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+
+        android:orientation="horizontal">
+    <TextView
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:text="AC"
+        android:textColor="#5A0000"
+        android:onClick="reset"
+        android:id="@+id/AC"
+        android:background="#ffffff"
+        android:layout_margin="1dp"
+        tools:ignore="Suspicious0dp" />
+    <TextView
+        android:layout_weight="1"
+        android:gravity="center"
+        android:id="@+id/plus_minus"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:text="+/-"
+        android:onClick="addSymbol"
+        android:background="#ffffff"
+        android:layout_margin="1dp"
+        tools:ignore="Suspicious0dp" />
+    <TextView
+        android:layout_weight="1"
+        android:gravity="center"
+        android:id="@+id/percent"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:text="%"
+        android:onClick="addSymbol"
+        android:background="#ffffff"
+        android:layout_margin="1dp"
+        tools:ignore="Suspicious0dp" />
+    <TextView
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:text="÷"
+        android:onClick="addSymbol"
+        android:id="@+id/division"
+        android:background="#ffffff"
+        android:layout_margin="1dp"
+        tools:ignore="Suspicious0dp" />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:text="7"
+        android:onClick="addSymbol"
+
+        android:id="@+id/seven"
+        android:background="#ffffff"
+        android:layout_margin="1dp"
+        android:layout_gravity="center" />
+    <TextView
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:text="8"
+        android:onClick="addSymbol"
+
+        android:id="@+id/eight"
+        android:background="#ffffff"
+        android:layout_margin="1dp"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_weight="1"
+        android:gravity="center"
+        android:id="@+id/nine"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:text="9"
+        android:onClick="addSymbol"
+
+        android:background="#ffffff"
+        android:layout_margin="1dp"
+        android:layout_gravity="center" />
+    <TextView
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:text="×"
+        android:onClick="addSymbol"
+        android:id="@+id/multiply"
+        android:gravity="center"
+        android:background="#ffffff"
+        android:layout_margin="1dp"
+        android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+
+        android:orientation="horizontal">
+    <TextView
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:text="4"
+        android:id="@+id/four"
+        android:onClick="addSymbol"
+        android:gravity="center"
+        android:background="#ffffff"
+        android:layout_margin="1dp"
+
+        />
+    <TextView
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:text="5"
+        android:onClick="addSymbol"
+
+        android:id="@+id/five"
+        android:background="#ffffff"
+        android:layout_margin="1dp"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:id="@+id/six"
+        android:background="#ffffff"
+        android:text="6"
+        android:onClick="addSymbol"
+        android:layout_margin="1dp"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:text="-"
+        android:onClick="addSymbol"
+        android:id="@+id/substract"
+        android:background="#ffffff"
+        android:layout_margin="1dp"
+        android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:background="#ffffff"
+        android:text="1"
+        android:onClick="addSymbol"
+
+        android:id="@+id/one"
+        android:layout_margin="1dp"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:background="#ffffff"
+        android:text="2"
+        android:onClick="addSymbol"
+
+        android:id="@+id/two"
+        android:layout_margin="1dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:background="#ffffff"
+        android:text="3"
+        android:onClick="addSymbol"
+        android:id="@+id/three"
+
+        android:layout_margin="1dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:text="+"
+        android:onClick="addSymbol"
+        android:id="@+id/add"
+        android:background="#ffffff"
+        android:layout_margin="1dp"
+        android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_weight="1.5"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:text="0"
+        android:onClick="addSymbol"
+
+        android:id="@+id/zero"
+        android:gravity="center"
+        android:background="#ffffff"
+        android:layout_margin="1dp"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:background="#ffffff"
+        android:text="."
+        android:onClick="addSymbol"
+        android:id="@+id/dot"
+        android:layout_margin="1dp"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:text="="
+        android:onClick="calculate"
+        android:id="@+id/equals"
+        android:gravity="center"
+        android:background="#ffffff"
+        android:layout_margin="1dp"
+        android:layout_gravity="center"/>
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
