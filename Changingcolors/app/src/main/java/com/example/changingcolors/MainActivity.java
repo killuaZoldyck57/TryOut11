@@ -31,19 +31,25 @@ public class MainActivity extends Activity {
             a1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    Drawable c = a1.getBackground();
                     a1.setBackground(a2.getBackground());
+                    a2.setBackground(c);
                 }
             });
             a2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    Drawable c = a2.getBackground();
                     a2.setBackground(a3.getBackground());
+                    a3.setBackground(c);
                 }
             });
             a3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    Drawable c = a3.getBackground();
                     a3.setBackground(a1.getBackground());
+                    a1.setBackground(c);
 
 
                 }
