@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text=""
+            android:id="@+id/num1"
+            android:textAlignment="center"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="+"
+
+            android:textAlignment="center"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/num2"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="="
+            android:textAlignment="center"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text=""
+            android:id="@+id/sol"
+            android:textAlignment="center"
+            android:textSize="30dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            android:id="@+id/rn1"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            android:id="@+id/rn2"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            android:id="@+id/rn3"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            android:id="@+id/rn4"
+
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width ="250dp"
+        android:layout_height="100dp"
+       android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:id="@+id/sol1"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="30dp" />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:id="@+id/btn"
+        android:text="Play"
+        android:textSize="30dp"/>
+
+
+</LinearLayout>
