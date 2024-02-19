@@ -16,6 +16,7 @@
             android:layout_width="100dp"
             android:background="#FF0303"
             android:layout_margin="20dp"
+            
             android:id="@+id/a1"
             android:layout_height="100dp"/>
         <TextView
