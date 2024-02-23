@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,6 +31,8 @@ public class MainActivity extends Activity {
     private TextView opMul;
     private TextView opDi;
     private TextView op;
+    private TextView scrBrd;
+    private int cnt;
 
 
 
@@ -41,6 +45,8 @@ public class MainActivity extends Activity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                scrBrd =findViewById(R.id.scr_brd);
                 num1 = findViewById(R.id.num1);
                 sol1 =findViewById(R.id.sol1);
                 num2 = findViewById(R.id.num2);
@@ -63,6 +69,12 @@ public class MainActivity extends Activity {
                     num1.setText(num0 + "");
                 num2.setText(num3 + "");
                 sol1.setText("");
+                rn1.setAlpha(1f);
+                rn3.setAlpha(1f);
+                rn2.setAlpha(1f);
+                rn4.setAlpha(1f);
+
+
 
                 TextView[] arr1 = {opPl,opMi,opMul,opDi};
                 op.setText(arr1[(int)(Math.floor(Math.random()*arr1.length))].getText());
@@ -100,14 +112,30 @@ public class MainActivity extends Activity {
                         }
                     }
                 }
+
                 rn1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        rn2.setAlpha(0f);
+                        rn3.setAlpha(0f);
+                        rn4.setAlpha(0f);
                         if (rn1.getText().equals(a.getText())) {
                             sol1.setText("Correct");
+                            cnt++ ;
                             sol1.setTextColor(getResources().getColor(android.R.color.holo_green_dark)); // Green color for correct
                         } else {
                             sol1.setText("Incorrect");
+                            scrBrd.setText( "Score: "+cnt);
+                            final Handler handler = new Handler(Looper.getMainLooper());
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    scrBrd.setText("Score: ");
+                                    reset();
+
+                                }
+                            }, 2000);
+                            cnt = 0;
                             sol1.setTextColor(getResources().getColor(android.R.color.holo_red_dark)); // Red color for incorrect
                         }
                     }
@@ -117,24 +145,54 @@ public class MainActivity extends Activity {
                     @SuppressLint("SuspiciousIndentation")
                     @Override
                     public void onClick(View view) {
+                        rn1.setAlpha(0f);
+                        rn3.setAlpha(0f);
+                        rn4.setAlpha(0f);
+
                         if (rn2.getText().equals(a.getText())) {
                             sol1.setText("Correct");
+                            cnt++ ;
                             sol1.setTextColor(getResources().getColor(android.R.color.holo_green_dark)); // Green color for correct
                         } else {
                             sol1.setText("Incorrect");
+                            scrBrd.setText( "Score: "+ cnt);
+                            final Handler handler = new Handler(Looper.getMainLooper());
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    scrBrd.setText("Score: ");
+                                    reset();
+                                }
+                            }, 2000);
+                            cnt = 0;
                             sol1.setTextColor(getResources().getColor(android.R.color.holo_red_dark)); // Red color for incorrect
                         }
                     }
                 });
 
                 rn3.setOnClickListener(new View.OnClickListener() {
+
                     @Override
                     public void onClick(View view) {
+                        rn1.setAlpha(0f);
+                        rn2.setAlpha(0f);
+                        rn4.setAlpha(0f);
                         if (rn3.getText().equals(a.getText())) {
                             sol1.setText("Correct");
+                            cnt++ ;
                             sol1.setTextColor(getResources().getColor(android.R.color.holo_green_dark)); // Green color for correct
                         } else {
                             sol1.setText("Incorrect");
+                            scrBrd.setText( "Score: "+cnt);
+                            final Handler handler = new Handler(Looper.getMainLooper());
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    scrBrd.setText("Score: ");
+                                    reset();
+                                }
+                            }, 2000);
+                            cnt = 0;
                             sol1.setTextColor(getResources().getColor(android.R.color.holo_red_dark)); // Red color for incorrect
                         }
                     }
@@ -143,11 +201,25 @@ public class MainActivity extends Activity {
                 rn4.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        rn1.setAlpha(0f);
+                        rn3.setAlpha(0f);
+                        rn2.setAlpha(0f);
                         if (rn4.getText().equals(a.getText())) {
                             sol1.setText("Correct");
+                            cnt++ ;
                             sol1.setTextColor(getResources().getColor(android.R.color.holo_green_dark)); // Green color for correct
                         } else {
                             sol1.setText("Incorrect");
+                            scrBrd.setText( "Score: "+cnt);
+                            final Handler handler = new Handler(Looper.getMainLooper());
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    scrBrd.setText("Score: ");
+                                    reset();
+                                }
+                            }, 2000);
+                            cnt = 0;
                             sol1.setTextColor(getResources().getColor(android.R.color.holo_red_dark)); // Red color for incorrect
                         }
                     }
@@ -156,6 +228,21 @@ public class MainActivity extends Activity {
 
         });
 
+
+    }
+    public void reset(){
+        num1.setText("");
+        num2.setText("");
+        op.setText("");
+        rn1.setText("");
+        rn2.setText("");
+        rn3.setText("");
+        rn4.setText("");
+        sol1.setText("");
+        rn1.setAlpha(1f);
+        rn3.setAlpha(1f);
+        rn2.setAlpha(1f);
+        rn4.setAlpha(1f);
 
     }
 
