@@ -33,6 +33,9 @@ public class MainActivity extends Activity {
     private TextView op;
     private TextView scrBrd;
     private int cnt;
+    private TextView q1;
+    private TextView hScore;
+    private int hCnt;
 
 
 
@@ -45,7 +48,7 @@ public class MainActivity extends Activity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                q1 = findViewById(R.id.q1);
                 scrBrd =findViewById(R.id.scr_brd);
                 num1 = findViewById(R.id.num1);
                 sol1 =findViewById(R.id.sol1);
@@ -59,6 +62,7 @@ public class MainActivity extends Activity {
                 opMi = findViewById(R.id.op_mi);
                 opPl = findViewById(R.id.op_pl);
                 op = findViewById(R.id.op);
+                hScore= findViewById(R.id.high_scr);
                 int num3 = (int)(Math.random()*51);
                 int num0 = (int)(Math.random()*51);
                 if(num3>num0 ){
@@ -73,6 +77,10 @@ public class MainActivity extends Activity {
                 rn3.setAlpha(1f);
                 rn2.setAlpha(1f);
                 rn4.setAlpha(1f);
+                q1.setAlpha(1f);
+                scrBrd.setAlpha(1f);
+                hScore.setAlpha(1f);
+
 
 
 
@@ -126,11 +134,16 @@ public class MainActivity extends Activity {
                         } else {
                             sol1.setText("Incorrect");
                             scrBrd.setText( "Score: "+cnt);
+                            if(cnt>hCnt){
+                                hCnt = cnt ;
+                            }
+
                             final Handler handler = new Handler(Looper.getMainLooper());
                             handler.postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
                                     scrBrd.setText("Score: ");
+
                                     reset();
 
                                 }
@@ -156,6 +169,9 @@ public class MainActivity extends Activity {
                         } else {
                             sol1.setText("Incorrect");
                             scrBrd.setText( "Score: "+ cnt);
+                            if(cnt>hCnt){
+                                hCnt = cnt ;
+                            }
                             final Handler handler = new Handler(Looper.getMainLooper());
                             handler.postDelayed(new Runnable() {
                                 @Override
@@ -184,6 +200,9 @@ public class MainActivity extends Activity {
                         } else {
                             sol1.setText("Incorrect");
                             scrBrd.setText( "Score: "+cnt);
+                            if(cnt>hCnt){
+                                hCnt = cnt ;
+                            }
                             final Handler handler = new Handler(Looper.getMainLooper());
                             handler.postDelayed(new Runnable() {
                                 @Override
@@ -207,10 +226,14 @@ public class MainActivity extends Activity {
                         if (rn4.getText().equals(a.getText())) {
                             sol1.setText("Correct");
                             cnt++ ;
+
                             sol1.setTextColor(getResources().getColor(android.R.color.holo_green_dark)); // Green color for correct
                         } else {
                             sol1.setText("Incorrect");
                             scrBrd.setText( "Score: "+cnt);
+                            if(cnt>hCnt){
+                                hCnt = cnt ;
+                            }
                             final Handler handler = new Handler(Looper.getMainLooper());
                             handler.postDelayed(new Runnable() {
                                 @Override
@@ -238,11 +261,14 @@ public class MainActivity extends Activity {
         rn2.setText("");
         rn3.setText("");
         rn4.setText("");
+        hScore.setText("Highest Score: "+ hCnt);
         sol1.setText("");
-        rn1.setAlpha(1f);
-        rn3.setAlpha(1f);
-        rn2.setAlpha(1f);
-        rn4.setAlpha(1f);
+        rn1.setAlpha(0f);
+        rn3.setAlpha(0f);
+        rn2.setAlpha(0f);
+        rn4.setAlpha(0f);
+        q1.setAlpha(0f);
+        scrBrd.setAlpha(0f);
 
     }
 
