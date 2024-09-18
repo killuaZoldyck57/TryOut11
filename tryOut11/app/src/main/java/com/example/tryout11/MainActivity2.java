@@ -17,6 +17,6 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
           tv= findViewById(R.id.mark);
-          tv.setText(getIntent().getIntExtra("grade" , 0) + "");
+          tv.setText(getIntent().getIntExtra("grade" , 0) + "%");
     }
 }
