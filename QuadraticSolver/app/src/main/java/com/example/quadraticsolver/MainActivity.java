@@ -45,7 +45,7 @@ public class MainActivity extends Activity {
                     x1 = ((-b1 + (Math.sqrt(Math.pow(b1 ,2)-4*a1*c1)))/(2*a1) );
                     x2 =  ((-b1 - (Math.sqrt(Math.pow(b1 ,2)-4*a1*c1)))/(2*a1) );
                     if(x1==x2)
-                        sol1.setText("x1: "+x1);
+                        sol1.setText("X: "+x1);
                     else {
                         sol1.setText( "x1: "+x1 + "");
                         sol2.setText("x2: "+x2 + "");
